@@ -1,9 +1,7 @@
 function fib(n) {
-    var fibArr = [];
-    for (var i = 0; i <= n; i++) {
-	if (i === 0) fibArr[i]=0;
-	else if (i === 1) fibArr[i]=1;
-	else fibArr[i] = fibArr[i-1] + fibArr[i-2];
-    }
+    if (n == 0) return [0];
+    else if (n == 1) return [0,1];
+    var fibArr = fib(n-1);
+    fibArr.push(fibArr[n-1]+fibArr[n-2]);
     return fibArr;
 }
